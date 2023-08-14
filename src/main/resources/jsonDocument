@@ -1,0 +1,416 @@
+{
+	"info": {
+		"_postman_id": "b1d7fc89-bd11-45cc-8272-daa47fa9b5c1",
+		"name": "capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13995542",
+		"_collection_link": "https://crimson-desert-781654.postman.co/workspace/capstone~09a640a4-147e-49dc-a5ce-b310f782ded2/collection/13995542-b1d7fc89-bd11-45cc-8272-daa47fa9b5c1?action=share&source=collection_link&creator=13995542"
+	},
+	"item": [
+		{
+			"name": "airline",
+			"item": [
+				{
+					"name": "get all airlines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/airlines",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"airlines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add airlines",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"id\":1,\r\n\"name\":\"Pegasus\",\r\n\"country\":\"Turkey\"\r\n},\r\n{\r\n    \"id\":2,\r\n    \"name\":\"Türk Hava Yolları\",\r\n    \"country\":\"Turkey\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/airlines/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"airlines",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update airlines",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Pegasus\",\r\n    \"country\":\"Turkey\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/airlines/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"airlines",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete airlines",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/airlines/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"airlines",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search airline by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/airlines/Pegasus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"airlines",
+								"Pegasus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "airport",
+			"item": [
+				{
+					"name": "add airports",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":15,\r\n    \"name\":\"Adnan Menderes Havaalanı\",\r\n    \"city\":\"Izmir\",\r\n    \"country\":\"Turkey\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/airports/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"airports",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search airport by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/airports/search/Adnan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"airports",
+								"search",
+								"Adnan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all airports",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/airports",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"airports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update airports",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 3,\r\n        \"name\": \"Istanbul Sabiha Gokcen\",\r\n        \"country\": \"Turkey\",\r\n        \"city\": \"Istanbul\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/airports/update/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"airports",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "route",
+			"item": [
+				{
+					"name": "add routes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":3,\r\n    \"distance\":346,\r\n    \"name\":\"Istanbul Izmir\",\r\n    \"sourceAirportId\":2,\r\n    \"destinationAirportId\":1,\r\n    \"airlineId\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/routes/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"routes",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search route by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/routes/search/ist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"routes",
+								"search",
+								"ist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all routes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/routes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"routes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ticket",
+			"item": [
+				{
+					"name": "buy ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"passengerName\": \"string\",\r\n  \"ticketNumber\": \"string\",\r\n  \"maskedCreditCardNumber\": \"string\",\r\n  \"flightId\": 1,\r\n  \"totalSeats\": 9,\r\n  \"availableSeats\": 9,\r\n  \"departureTime\": \"2023-08-14T20:05:35.228Z\",\r\n  \"arrivalTime\": \"2023-08-14T20:05:35.228Z\",\r\n  \"price\": 500,\r\n  \"seatClass\": \"string\",\r\n  \"status\": \"RESERVED\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tickets/buy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tickets",
+								"buy"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "flights",
+			"item": [
+				{
+					"name": "add flights to airline",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"airlineId\":2,\r\n  \"totalSeat\":9,\r\n  \"flightNumber\":\"A234\",\r\n  \"departureAirportCode\":\"B6\",\r\n  \"arrivalAirportCode\":\"C10\",\r\n  \"routeId\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/airlines/flights/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"airlines",
+								"flights",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all flights by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/airlines/flights/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"airlines",
+								"flights",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
